@@ -1,0 +1,61 @@
+{
+  "name": "test-usabilla",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "license": "MIT",
+  "private": true,
+  "engines": {
+    "node": ">=8.0",
+    "yarn": ">=1.2"
+  },
+  "scripts": {
+    "start": "webpack-dev-server --config tools/config/webpack.config.js --open",
+    "build": "webpack --config tools/config/webpack.config.js",
+    "lint": "eslint .",
+    "inspect": "jsinspect ./src",
+    "format": "npm run format:src && npm run format:tests",
+    "format:src": "prettier-eslint \"src/**/*.js\" --write && prettier-eslint \"src/**/*.json\" --write --parser=json",
+    "format:tests": "prettier-eslint \"tests/**/*.js\" --write && prettier-eslint \"tests/**/*.json\" --write --parser=json",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
+  },
+  "devDependencies": {
+    "@storybook/addon-actions": "^3.2.19",
+    "@storybook/addon-knobs": "^3.2.14",
+    "@storybook/addon-links": "^3.2.14",
+    "@storybook/react": "^3.2.14",
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^8.0.1",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "clean-webpack-plugin": "^0.1.17",
+    "eslint": "^4.10.0",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-config-prettier": "^2.7.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-jsx-a11y": "^6.0.2",
+    "eslint-plugin-react": "^7.4.0",
+    "file-loader": "^1.1.11",
+    "html-webpack-plugin": "^2.30.1",
+    "jsinspect": "^0.12.7",
+    "node-sass": "^4.8.3",
+    "prettier-eslint": "^8.2.1",
+    "prettier-eslint-cli": "^4.4.0",
+    "sass-loader": "^7.0.1",
+    "webpack": "^3.8.1",
+    "webpack-dev-server": "^2.9.4"
+  },
+  "dependencies": {
+    "babel-polyfill": "^6.26.0",
+    "babel-runtime": "^6.26.0",
+    "lodash": "^4.17.4",
+    "prop-types": "^15.6.0",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0"
+  }
+}

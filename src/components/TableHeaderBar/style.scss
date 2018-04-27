@@ -1,0 +1,40 @@
+.tableHeaderBar {
+	display: flex;
+	align-items:center;
+	justify-content: space-around;
+	height: 50px;
+	width: 100%;
+
+	.commentFilter {
+		flex-basis: 15%;
+		flex-grow: 1;
+		padding: 5px;
+
+		input {
+			width:100%;
+		}
+	}
+
+	.ratingFilter {
+		flex-grow: 2;
+		padding: 5px;
+
+		button {
+
+		}
+	}
+
+	.pagination {
+		flex-grow: 1;
+		padding: 5px;
+		text-align: right;
+
+		.count {
+			margin: 0 5px 0 5px;
+		}
+
+		select {
+			
+		}
+	}
+}

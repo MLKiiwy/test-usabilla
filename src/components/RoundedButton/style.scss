@@ -1,0 +1,33 @@
+.rounded {
+  border: none;
+  padding: 0px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  border-radius: 50%;
+  width:35px;
+  height:35px;
+  cursor: pointer;
+  background-color: #F2F6F9;
+  border: 1px solid #DBE0E4;
+  color: #DBE0E4;
+}
+
+.rounded:disabled {
+  cursor: auto;
+}
+
+.rounded.label {
+  background-color: #069FCB;
+  color: white;
+  border: none;
+  cursor: auto;
+}
+
+.rounded.active {
+  background-color: #069FCB;
+  color: white;
+  border: none;
+}
