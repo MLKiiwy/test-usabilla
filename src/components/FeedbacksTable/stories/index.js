@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import FeedbacksTable from '../FeedbacksTable';
+import FeedbacksTable from '../';
 
 const sampleList = [
   { rating: 1, comment: 'one comment', browser: 'Chrome 14', device: 'Desktop', platform: 'OS X' },

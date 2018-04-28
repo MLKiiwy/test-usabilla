@@ -1,6 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './container/App';
+import { createStore, applyMiddleware } from 'redux';
+import { Provider } from 'react-redux';
+import thunk from 'redux-thunk';
+import rootReducer from './reducers';
+import App from './containers/App';
 
 function run() {
   let domAppElement = document.getElementById('app');
@@ -9,8 +13,20 @@ function run() {
     document.body.appendChild(domAppElement);
   }
 
+  /* eslint no-underscore-dangle:off */
+  const store = createStore(
+    rootReducer,
+    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(), // Only for dev
+    applyMiddleware(thunk),
+  );
+
   /* eslint react/jsx-filename-extension: off */
-  ReactDOM.render(<App />, domAppElement);
+  ReactDOM.render(
+    <Provider store={store}>
+      <App />
+    </Provider>,
+    domAppElement,
+  );
 }
 
 if (['complete', 'loaded', 'interactive'].includes(document.readyState) && document.body) {

@@ -4,6 +4,7 @@ module.exports = {
   env: {
     es6: true,
     browser: true,
+    jest: true,
   },
   rules: {
     'valid-jsdoc': 'error',
@@ -11,7 +12,7 @@ module.exports = {
     'import/no-extraneous-dependencies': [
       'error',
       {
-        devDependencies: ['tools/**', '**/stories/*'],
+        devDependencies: ['tests/**', '**/stories/*', 'tools/**'],
         optionalDependencies: false,
       },
     ],

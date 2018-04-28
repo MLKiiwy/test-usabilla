@@ -1,15 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import RoundedButton from '../RoundedButton/RoundedButton'
-import style from './style.scss';
-
-// https://css-tricks.com/responsive-data-tables/
+import RoundedButton from '../RoundedButton';
+import './style.scss';
 
 function FeedbacksTable({ loading, list, error }) {
   if (loading) {
-    return <span>Loading ...</span>
+    return <span>Loading ...</span>;
   } else if (error) {
-    return <span>{error}</span>
+    return <span>{error}</span>;
   }
 
   return (
@@ -24,9 +22,11 @@ function FeedbacksTable({ loading, list, error }) {
         </tr>
       </thead>
       <tbody>
-        {list.map(({ rating, comment, browser, device, platform }) => (
-          <tr>
-            <td><RoundedButton rating={rating} /></td>
+        {list.map(({ rating, comment, browser, device, platform, id }) => (
+          <tr key={id}>
+            <td>
+              <RoundedButton rating={rating} />
+            </td>
             <td className="comment">{comment}</td>
             <td>{browser}</td>
             <td>{device}</td>
@@ -41,13 +41,15 @@ function FeedbacksTable({ loading, list, error }) {
 FeedbacksTable.propTypes = {
   loading: PropTypes.bool,
   error: PropTypes.string,
-  list: PropTypes.arrayOf(PropTypes.shape({
-    rating: PropTypes.number.isRequired,
-    comment: PropTypes.string.isRequired,
-    browser: PropTypes.string.isRequired,
-    device: PropTypes.string.isRequired,
-    platform: PropTypes.string.isRequired,
-  }))
+  list: PropTypes.arrayOf(
+    PropTypes.shape({
+      rating: PropTypes.number.isRequired,
+      comment: PropTypes.string.isRequired,
+      browser: PropTypes.string.isRequired,
+      device: PropTypes.string.isRequired,
+      platform: PropTypes.string.isRequired,
+    }),
+  ),
 };
 
 FeedbacksTable.defaultProps = {

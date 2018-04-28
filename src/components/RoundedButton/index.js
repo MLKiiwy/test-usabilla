@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import style from './style.scss';
+import './style.scss';
 
-function RoundedButton({ label, onClick, active }) {
+function RoundedButton({ rating, onClick, active }) {
   let className;
   if (onClick === null) {
     className = 'rounded label';
@@ -10,20 +10,24 @@ function RoundedButton({ label, onClick, active }) {
     className = active ? 'rounded active' : 'rounded';
   }
   return (
-    <button className={className} disabled={onClick === null} onClick={() => onClick(label, !active)}>
-      {label}
+    <button
+      className={className}
+      disabled={onClick === null}
+      onClick={() => onClick(rating, !active)}
+    >
+      {rating}
     </button>
   );
 }
 
 RoundedButton.propTypes = {
-  label: PropTypes.string,
+  rating: PropTypes.number,
   onClick: PropTypes.func,
-  active: PropTypes.bool
+  active: PropTypes.bool,
 };
 
 RoundedButton.defaultProps = {
-  label: '0',
+  rating: 0,
   onClick: null,
   active: false,
 };

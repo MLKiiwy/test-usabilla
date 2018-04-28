@@ -1,9 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import RoundedButton from '../RoundedButton/RoundedButton'
-import style from './style.scss';
+import RoundedButton from '../RoundedButton';
+import './style.scss';
 
-function TableHeaderBar({ onCommentFilterChange, onRatingFilterChange, onPageChange, maxRating, activeRatings, count, perPage, actualPage }) {
+function TableHeaderBar({
+  onCommentFilterChange,
+  onRatingFilterChange,
+  onPageChange,
+  maxRating,
+  activeRatings,
+  count,
+  perPage,
+  actualPage,
+}) {
   const ratings = [];
   for (let i = 0; i < maxRating; i += 1) {
     ratings.push(i + 1);
@@ -15,25 +24,35 @@ function TableHeaderBar({ onCommentFilterChange, onRatingFilterChange, onPageCha
   }
 
   return (
-    <div className='tableHeaderBar'>
-      <div className='commentFilter'>
-        <input type="text" placeholder="Search ..." onChange={e => onCommentFilterChange(e.currentTarget.value)} />
+    <div className="tableHeaderBar">
+      <div className="commentFilter">
+        <input
+          type="text"
+          placeholder="Search ..."
+          onChange={e => onCommentFilterChange(e.currentTarget.value)}
+        />
       </div>
-      <div className='ratingFilter'>
+      <div className="ratingFilter">
         {ratings.map(rating => (
           <RoundedButton
-            label={rating}
+            key={rating}
+            rating={rating}
             active={activeRatings.indexOf(rating) !== -1}
             onClick={onRatingFilterChange}
           />
         ))}
       </div>
-      <div className='pagination'>
-        <span className='count'>Count: {count}</span>
+      <div className="pagination">
+        <span className="count">Count: {count}</span>
         <span>Page: </span>
-        <select onChange={e => onPageChange(parseInt(e.currentTarget.value, 10))}>
+        <select
+          value={actualPage}
+          onChange={e => onPageChange(parseInt(e.currentTarget.value, 10))}
+        >
           {pages.map(page => (
-            <option value={page} selected={page === actualPage}>{page}</option>
+            <option key={page} value={page}>
+              {page}
+            </option>
           ))}
         </select>
       </div>
@@ -49,7 +68,7 @@ TableHeaderBar.propTypes = {
   activeRatings: PropTypes.arrayOf(PropTypes.number).isRequired,
   count: PropTypes.number.isRequired,
   perPage: PropTypes.number,
-  actualPage: PropTypes.number.isRequired
+  actualPage: PropTypes.number.isRequired,
 };
 
 TableHeaderBar.defaultProps = {
