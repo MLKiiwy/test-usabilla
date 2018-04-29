@@ -9,7 +9,7 @@ Some comments :
 - I added a pagination very quickly (not the best implementation for perf).
 - the scss part is still using normal classnames (no unique classname), it can be improve with some webpack conf (importing scss file inside the component file and using a generated classname)
 - clearly, i'm not an expert for the css part (usually i'm not doing it), there are lot possibility of improvement and of course we are far away from pixel perfect with the provided design.
-- I have choosen to switch from table to list in case of mobile / little width. That's better for the end user in term of UX.
+- I have choosen to switch from table to list in case of mobile / litle width. That's better for the end user in term of UX.
 
 ## How to try it
 

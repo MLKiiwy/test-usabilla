@@ -11,7 +11,7 @@ function FeedbacksTable({ loading, list, error }) {
   }
 
   return (
-    <table>
+    <table className='feedbacksTable'>
       <thead>
         <tr>
           <th>Rating</th>

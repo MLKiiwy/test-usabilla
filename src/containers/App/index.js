@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import FilteredFeedbacksTable from '../../containers/FilteredFeedbacksTable';
 import TableHeaderBar from '../../containers/TableHeaderBar';
 import { fetchFeedbacks } from '../../actions';
+import './style.scss';
 
 class App extends Component {
   componentDidMount() {
@@ -13,7 +14,7 @@ class App extends Component {
 
   render() {
     return (
-      <div>
+      <div className='app'>
         <TableHeaderBar />
         <FilteredFeedbacksTable />
       </div>
