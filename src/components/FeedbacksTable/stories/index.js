@@ -3,11 +3,11 @@ import { storiesOf } from '@storybook/react';
 import FeedbacksTable from '../';
 
 const sampleList = [
-  { rating: 1, comment: 'one comment', browser: 'Chrome 14', device: 'Desktop', platform: 'OS X' },
-  { rating: 1, comment: 'one comment', browser: 'Chrome 14', device: 'Desktop', platform: 'OS X' },
-  { rating: 1, comment: 'one comment', browser: 'Chrome 14', device: 'Desktop', platform: 'OS X' },
-  { rating: 1, comment: 'one comment', browser: 'Chrome 14', device: 'Desktop', platform: 'OS X' },
-  { rating: 1, comment: 'one comment', browser: 'Chrome 14', device: 'Desktop', platform: 'OS X' },
+  { rating: 1, comment: 'one comment', browser: 'Chrome 14', device: 'Desktop', platform: 'OS X', id: 'a' },
+  { rating: 1, comment: 'one comment', browser: 'Chrome 14', device: 'Desktop', platform: 'OS X', id: 'b' },
+  { rating: 1, comment: 'one comment', browser: 'Chrome 14', device: 'Desktop', platform: 'OS X', id: 'c' },
+  { rating: 1, comment: 'one comment', browser: 'Chrome 14', device: 'Desktop', platform: 'OS X', id: 'd' },
+  { rating: 1, comment: 'one comment', browser: 'Chrome 14', device: 'Desktop', platform: 'OS X', id: 'e' },
 ];
 
 storiesOf('FeedbacksTable', module)

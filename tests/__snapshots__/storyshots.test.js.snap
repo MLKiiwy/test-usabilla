@@ -1,0 +1,432 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots FeedbacksTable Default 1`] = `
+<table
+  className="feedbacksTable"
+>
+  <thead>
+    <tr>
+      <th>
+        Rating
+      </th>
+      <th
+        className="comment"
+      >
+        Comment
+      </th>
+      <th>
+        Browser
+      </th>
+      <th>
+        Device
+      </th>
+      <th>
+        Platform
+      </th>
+    </tr>
+  </thead>
+  <tbody />
+</table>
+`;
+
+exports[`Storyshots FeedbacksTable Default loading 1`] = `
+<span>
+  Loading ...
+</span>
+`;
+
+exports[`Storyshots FeedbacksTable With list of 5 elements 1`] = `
+<table
+  className="feedbacksTable"
+>
+  <thead>
+    <tr>
+      <th>
+        Rating
+      </th>
+      <th
+        className="comment"
+      >
+        Comment
+      </th>
+      <th>
+        Browser
+      </th>
+      <th>
+        Device
+      </th>
+      <th>
+        Platform
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <button
+          className="rounded label"
+          disabled={true}
+          onClick={[Function]}
+        >
+          1
+        </button>
+      </td>
+      <td
+        className="comment"
+      >
+        one comment
+      </td>
+      <td>
+        Chrome 14
+      </td>
+      <td>
+        Desktop
+      </td>
+      <td>
+        OS X
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <button
+          className="rounded label"
+          disabled={true}
+          onClick={[Function]}
+        >
+          1
+        </button>
+      </td>
+      <td
+        className="comment"
+      >
+        one comment
+      </td>
+      <td>
+        Chrome 14
+      </td>
+      <td>
+        Desktop
+      </td>
+      <td>
+        OS X
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <button
+          className="rounded label"
+          disabled={true}
+          onClick={[Function]}
+        >
+          1
+        </button>
+      </td>
+      <td
+        className="comment"
+      >
+        one comment
+      </td>
+      <td>
+        Chrome 14
+      </td>
+      <td>
+        Desktop
+      </td>
+      <td>
+        OS X
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <button
+          className="rounded label"
+          disabled={true}
+          onClick={[Function]}
+        >
+          1
+        </button>
+      </td>
+      <td
+        className="comment"
+      >
+        one comment
+      </td>
+      <td>
+        Chrome 14
+      </td>
+      <td>
+        Desktop
+      </td>
+      <td>
+        OS X
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <button
+          className="rounded label"
+          disabled={true}
+          onClick={[Function]}
+        >
+          1
+        </button>
+      </td>
+      <td
+        className="comment"
+      >
+        one comment
+      </td>
+      <td>
+        Chrome 14
+      </td>
+      <td>
+        Desktop
+      </td>
+      <td>
+        OS X
+      </td>
+    </tr>
+  </tbody>
+</table>
+`;
+
+exports[`Storyshots RoundedButton Active, with click handler and 6 1`] = `
+<button
+  className="rounded active"
+  disabled={false}
+  onClick={[Function]}
+>
+  6
+</button>
+`;
+
+exports[`Storyshots RoundedButton Default (label) 1`] = `
+<button
+  className="rounded label"
+  disabled={true}
+  onClick={[Function]}
+>
+  0
+</button>
+`;
+
+exports[`Storyshots RoundedButton Inactive, with click handler and 6 1`] = `
+<button
+  className="rounded"
+  disabled={false}
+  onClick={[Function]}
+>
+  6
+</button>
+`;
+
+exports[`Storyshots RoundedButton Mode label, with 8 1`] = `
+<button
+  className="rounded label"
+  disabled={true}
+  onClick={[Function]}
+>
+  8
+</button>
+`;
+
+exports[`Storyshots TableHeaderBar Count: 5, page 1, no filter set 1`] = `
+<div
+  className="tableHeaderBar"
+>
+  <div
+    className="commentFilter"
+  >
+    <input
+      onChange={[Function]}
+      placeholder="Search ..."
+      type="text"
+    />
+  </div>
+  <div
+    className="ratingFilter"
+  >
+    <button
+      className="rounded"
+      disabled={false}
+      onClick={[Function]}
+    >
+      1
+    </button>
+    <button
+      className="rounded"
+      disabled={false}
+      onClick={[Function]}
+    >
+      2
+    </button>
+    <button
+      className="rounded"
+      disabled={false}
+      onClick={[Function]}
+    >
+      3
+    </button>
+    <button
+      className="rounded"
+      disabled={false}
+      onClick={[Function]}
+    >
+      4
+    </button>
+    <button
+      className="rounded"
+      disabled={false}
+      onClick={[Function]}
+    >
+      5
+    </button>
+  </div>
+  <div
+    className="pagination"
+  >
+    <span
+      className="count"
+    >
+      Count: 
+      5
+    </span>
+    <span>
+      Page: 
+    </span>
+    <select
+      onChange={[Function]}
+      value={1}
+    >
+      <option
+        value={1}
+      >
+        1
+      </option>
+    </select>
+  </div>
+</div>
+`;
+
+exports[`Storyshots TableHeaderBar Count: 100, 10 pages, on page 4, filter rating 1,4 1`] = `
+<div
+  className="tableHeaderBar"
+>
+  <div
+    className="commentFilter"
+  >
+    <input
+      onChange={[Function]}
+      placeholder="Search ..."
+      type="text"
+    />
+  </div>
+  <div
+    className="ratingFilter"
+  >
+    <button
+      className="rounded active"
+      disabled={false}
+      onClick={[Function]}
+    >
+      1
+    </button>
+    <button
+      className="rounded"
+      disabled={false}
+      onClick={[Function]}
+    >
+      2
+    </button>
+    <button
+      className="rounded"
+      disabled={false}
+      onClick={[Function]}
+    >
+      3
+    </button>
+    <button
+      className="rounded active"
+      disabled={false}
+      onClick={[Function]}
+    >
+      4
+    </button>
+    <button
+      className="rounded"
+      disabled={false}
+      onClick={[Function]}
+    >
+      5
+    </button>
+  </div>
+  <div
+    className="pagination"
+  >
+    <span
+      className="count"
+    >
+      Count: 
+      100
+    </span>
+    <span>
+      Page: 
+    </span>
+    <select
+      onChange={[Function]}
+      value={4}
+    >
+      <option
+        value={1}
+      >
+        1
+      </option>
+      <option
+        value={2}
+      >
+        2
+      </option>
+      <option
+        value={3}
+      >
+        3
+      </option>
+      <option
+        value={4}
+      >
+        4
+      </option>
+      <option
+        value={5}
+      >
+        5
+      </option>
+      <option
+        value={6}
+      >
+        6
+      </option>
+      <option
+        value={7}
+      >
+        7
+      </option>
+      <option
+        value={8}
+      >
+        8
+      </option>
+      <option
+        value={9}
+      >
+        9
+      </option>
+      <option
+        value={10}
+      >
+        10
+      </option>
+    </select>
+  </div>
+</div>
+`;
